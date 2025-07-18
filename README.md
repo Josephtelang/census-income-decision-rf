@@ -67,12 +67,6 @@ Key features used:
 
 ## 📁 Project Structure  
 
-```bash
-📦 census-income-decision-rf/
-├── Census_Income_Classification_Using_Decision_Trees_&_Random_Forests.ipynb
-├── README.md
-└── data/
-
 ##🚀 How to Run
 
 ###👉 Run in Google Colab
