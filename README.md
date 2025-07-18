@@ -1,89 +1,81 @@
-# census-income-decision-rf
-👨‍💼 census-income-decision-rf
-🧠 Census Income Classification Using Machine Learning
-This project predicts whether an individual's income exceeds $50K/year using U.S. census data. It demonstrates end-to-end classification using Decision Tree and Random Forest models, including data cleaning, preprocessing, hyperparameter tuning, evaluation, and insightful visualizations.
+# census-income-decision-rf  
+# 🧑‍💼 Census Income Classification Using Decision Trees & Random Forests  
 
-🔍 Problem Statement
-Build a binary classification model to predict the income class:
+This project predicts whether a person earns **more than $50K per year** based on U.S. Census data. It includes **data preprocessing, feature engineering, model training using Decision Trees and Random Forests, hyperparameter tuning**, and detailed **evaluation and visualization**.
 
-0 → Income ≤ $50K
+---
 
-1 → Income > $50K
+## 🔍 Problem Statement  
 
-📊 Dataset Overview
-Inspired by the UCI Adult Census Income dataset
+The goal is to build a **binary classification model** that predicts the `income` class:  
+- `0` → Income ≤ $50K  
+- `1` → Income > $50K  
 
-Contains demographic and employment-related information
+---
 
-Key features include:
+## 📊 Dataset Overview  
 
-age, education_num, hours_per_week, capital_gain, occupation, marital_status, etc.
+- Based on the **UCI Adult Income Dataset**, widely used in ML benchmarks.  
+- Contains features like age, education, occupation, hours worked per week, etc.  
+- Cleaned and prepared for supervised classification.  
 
-Preprocessed to have 56 features and ~22,000 rows
+Key features used:
+- `age`, `education-num`, `hours-per-week`, `capital-gain`, `occupation`, etc.  
+- Categorical variables such as `workclass`, `education`, `relationship`, etc., were encoded.
 
-⚙️ Project Workflow
-1. Data Cleaning
-Handled missing values
+---
 
-Removed redundant and duplicate columns
+## ⚙️ Project Workflow  
 
-2. Feature Engineering
-Converted categorical variables with one-hot encoding
+### 1. Data Cleaning  
+- Handled missing values (represented as '?') and dropped irrelevant rows.  
+- Converted income labels to binary (0 and 1).  
 
-Ensured numeric columns were scaled if needed
+### 2. Feature Engineering  
+- Applied Label Encoding to binary categorical columns.  
+- Used **One-Hot Encoding** for multi-category features.  
 
-3. Modeling
-Trained DecisionTreeClassifier (baseline)
+### 3. Modeling  
+- Trained a **DecisionTreeClassifier** and a **RandomForestClassifier** using scikit-learn.  
+- Performed **hyperparameter tuning** with `GridSearchCV`.  
+- Used `class_weight` to handle class imbalance.  
 
-Trained RandomForestClassifier with tuned hyperparameters
+### 4. Evaluation  
+- Compared models using **accuracy**, **confusion matrix**, and **classification report**.  
+- Identified best hyperparameters using grid search.  
 
-Handled class imbalance with class_weight ({0:1, 1:1.5})
+---
 
-4. Hyperparameter Tuning
-Used GridSearchCV on:
+## 📈 Results  
 
-n_estimators, max_depth, max_leaf_nodes, max_samples, min_samples_split, class_weight
+- Best model: **Random Forest Classifier**  
+- Achieved high validation accuracy  
+- Learned feature importance and effects of model tuning  
+- Final model generalizes well to unseen data  
 
-Evaluated using accuracy with cv=5
+---
 
-5. Evaluation
-Compared train/test accuracy
+## 🛠️ Technologies Used  
 
-Plotted confusion matrix
+- Python 3  
+- Pandas, NumPy  
+- Scikit-learn  
+- Matplotlib, Seaborn  
+- Jupyter Notebook  
 
-Analyzed feature_importances_ to identify key predictors
+---
 
-📈 Results
-Best model: Random Forest
+## 📁 Project Structure  
 
-Validation accuracy: ~90%
+```bash
+📦 census-income-decision-rf/
+├── Census_Income_Classification_Using_Decision_Trees_&_Random_Forests.ipynb
+├── README.md
+└── data/
 
-Important predictors: education level, age, capital gain, occupation
+##🚀 How to Run
 
-Class imbalance handled successfully
-
-Random Forest showed higher generalization compared to Decision Tree
-
-🛠️ Technologies Used
-Python 3
-
-Pandas, NumPy
-
-Scikit-learn
-
-Matplotlib, Seaborn
-
-Jupyter Notebook
-
-📁 Project Structure
-Copy
-Edit
-📦census-income-decision-rf
- ┣ 📜 Census_Income_Classification_Using_Decision_Trees_&_Random_Forests.ipynb
- ┣ 📄 README.md
- ┗ 📄 requirements.txt
-🚀 How to Run
-👉 Run in Google Colab
+###👉 Run in Google Colab
 Click below to launch the notebook:
 [Open in Colab](https://colab.research.google.com/drive/1SbOjxIa64R7Y0yPSCPO0ge_zfpRWJ6Sq#scrollTo=JsQEtQZtTcXT)
 
