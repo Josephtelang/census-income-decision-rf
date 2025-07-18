@@ -85,5 +85,5 @@ Edit
 🚀 How to Run
 👉 Run in Google Colab
 Click below to launch the notebook:
-🔗 Open in Colab
+[Open in Colab](https://colab.research.google.com/drive/1SbOjxIa64R7Y0yPSCPO0ge_zfpRWJ6Sq#scrollTo=JsQEtQZtTcXT)
 
